@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-TV | Stream Live</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1b1e3a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="H-TV">
+    <link rel="apple-touch-icon" href="icons/icon-192.jpg">
+    <!-- Google Fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Player container will be filled dynamically -->
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logotxt"><span>H</span><span>-TV</span></h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+                <li><a href="#guide" onclick="showSection('guide'); return false;">User Guide</a></li>
+                <li><a href="#faq" onclick="showSection('faq'); return false;">FAQs</a></li>
+                <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
+                <li><a href="#privacy" onclick="showSection('privacy'); return false;">Privacy</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Stream Your Favorite Channels Live</h1>
+        <p>Your trusted source for high-quality live television streaming. Watch your favorite shows, sports, and news wherever you are, anytime!</p>
+        <button class="cta-btn" onclick="scrollToPlayer()">Start Watching Now</button>
+    </section>
+
+    <section class="player-section" id="player-section">
+        <div class="video-player">
+            <div id="player-container"></div>
+        </div>
+        <div class="channel-guide">
+            <div class="guide-header">
+                <div class="filter-controls">
+                    <input type="text" id="search" placeholder="Search channels...">
+                    <div class="select-container">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="news">News</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="sports">Sports</option>
+                            <option value="movies">Movies</option>
+                            <option value="music">Music</option>
+                            <option value="kids">Kids</option>
+                            <option value="religious">Religious</option>
+                        </select>
+                    </div>
+                    <div class="select-container">
+                        <select id="countryFilter">
+                            <option value="all">All Countries</option>
+                            <option value="pakistan">Pakistan</option>
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="guide-actions">
+                    <button class="favorites-btn" id="favoritesToggle">
+                        <i class="fas fa-heart"></i> Favorites
+                    </button>
+                    <button class="history-toggle">
+                        <i class="fas fa-history"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="channels" id="channelsContainer">
+                <!-- Channels will be loaded dynamically from JavaScript -->
+                
+                
+            </div>
+            <div class="no-results">
+                <i class="fas fa-search"></i>
+                <p>No channels match your search criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>About Us</h2>
+                <p>Welcome to H-TV, your premium destination for live television streaming. We provide a seamless streaming experience for viewers who want to enjoy their favorite channels without interruption.</p>
+                <p>Our platform delivers high-quality content from officially licensed channels, ensuring you never miss your favorite shows, news updates, or sports events. Whether you're at home or on the go, H-TV keeps you connected to the content you love.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://placehold.co/600x400/1b998b/ffffff?text=H-TV+Experience" alt="About H-TV">
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="section">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>User Guide</h2>
+                <p>Welcome to H-TV's user guide. Here you'll find everything you need to know about using our streaming platform efficiently.</p>
+                
+                <h3><i class="fas fa-play-circle"></i> How to Watch Channels</h3>
+                <ol>
+                    <li>Browse through the channel list or use the search function to find your desired channel.</li>
+                    <li>Click on any channel card to start streaming immediately.</li>
+                    <li>The video player supports full-screen mode, volume control, and picture-in-picture functionality.</li>
+                </ol>
+                
+                <h3><i class="fas fa-heart"></i> Managing Favorites</h3>
+                <ol>
+                    <li>Click the heart icon on any channel card to add it to your favorites.</li>
+                    <li>The heart will fill in to show that the channel is now favorited.</li>
+                    <li>To view only your favorite channels, click the "Favorites" button above the channel list.</li>
+                    <li>To remove a channel from favorites, click the filled heart icon again.</li>
+                </ol>
+                
+                <h3><i class="fas fa-history"></i> Watch History</h3>
+                <ol>
+                    <li>Every channel you watch is automatically added to your watch history.</li>
+                    <li>Click the history icon (clock) in the top-right corner to view your watch history.</li>
+                    <li>Click on any history item to quickly tune back to that channel.</li>
+                    <li>Use the "Clear History" button at the bottom of the history panel to remove all history items.</li>
+                </ol>
+                
+                <h3><i class="fas fa-filter"></i> Filtering Channels</h3>
+                <ol>
+                    <li>Use the search box to find channels by name.</li>
+                    <li>Select categories from the dropdown to filter by content type (News, Entertainment, etc.).</li>
+                    <li>Filter by country to find channels from specific regions.</li>
+                    <li>Combine these filters to narrow down your selection precisely.</li>
+                </ol>
+                
+                <h3><i class="fas fa-moon"></i> Dark Mode</h3>
+                <p>Toggle between light and dark mode by clicking the moon/sun icon in the bottom-right corner of the screen for a more comfortable viewing experience at night.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://placehold.co/600x400/1b998b/ffffff?text=H-TV+User+Guide" alt="User Guide">
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="content-wrapper">
+            <div class="image-content">
+                <img src="https://placehold.co/600x400/2d3047/ffffff?text=Frequently+Asked+Questions" alt="FAQs">
+            </div>
+            <div class="text-content">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h3>What is H-TV?</h3>
+                    <p>H-TV is a streaming platform that allows you to watch live television channels from Pakistan and around the world. Our service is designed to provide a seamless streaming experience with an easy-to-use interface.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is H-TV free to use?</h3>
+                    <p>Yes, H-TV is completely free to use. We provide access to free-to-air channels without any subscription fees or hidden charges.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do I need to create an account?</h3>
+                    <p>No, H-TV does not require any account creation or registration. Simply visit our website and start streaming immediately.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Why isn't a channel loading?</h3>
+                    <p>Streaming quality depends on your internet connection and the source of the stream. If a channel isn't loading, try refreshing the page or selecting a different channel.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Does H-TV host or own the content?</h3>
+                    <p><strong>Important Disclaimer:</strong> H-TV does not host, control, or own any of the channels or streaming content available on our platform. All content is sourced from third-party providers that are freely available on the internet. We function solely as an aggregator providing links to these publicly available streams. H-TV respects copyright laws and intellectual property rights. If you believe any content violates copyright laws, please contact us immediately.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I use H-TV on my mobile device?</h3>
+                    <p>Yes, H-TV is fully responsive and works on all devices including smartphones, tablets, laptops, and desktop computers.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Where is my watch history stored?</h3>
+                    <p>Your watch history and favorites are stored locally on your device. We do not collect or store this information on our servers, ensuring your privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Contact Us</h2>
+                <p>We're here to help with any questions or feedback about H-TV. Our dedicated support team is ready to assist you with technical issues, account inquiries, or general information.</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: support@h-tv.com</li>
+                    <li><i class="fas fa-phone"></i> Phone: +92 300 1234567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Address: 123 Stream Avenue, Digital Plaza, Karachi, Pakistan</li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="https://placehold.co/600x400/ff9b54/ffffff?text=Contact+H-TV" alt="Contact Us">
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy" class="section">
+        <div class="content-wrapper">
+            <div class="image-content">
+                <img src="https://placehold.co/600x400/2d3047/ffffff?text=Your+Privacy+Matters" alt="Privacy Policy">
+            </div>
+            <div class="text-content">
+                <h2>Privacy Policy</h2>
+                <p>At H-TV, we prioritize your privacy and data security. Our comprehensive privacy policy outlines how we collect, use, and protect your information while using our service.</p>
+                <p>We implement robust security measures to safeguard your personal data and will never share your information with third parties without your explicit consent. By using H-TV, you agree to our privacy practices designed to provide a secure viewing experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>H-TV - Your Premium Pakistani TV Streaming Platform</h3>
+                <p>Welcome to H-TV, Pakistan's leading destination for live TV streaming. Enjoy seamless access to your favorite Pakistani channels including news, entertainment, sports, and more. Our platform offers a user-friendly experience with features like favorites, watch history, and personalized filtering to enhance your viewing experience.</p>
+                <p>Whether you're looking for the latest news updates, popular dramas, or live sports events from Pakistan and around the world, H-TV brings it all together in one convenient place. Stream anytime, anywhere, on any device - completely free.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#about" onclick="showSection('about'); return false;">About Us</a></li>
+                    <li><a href="#guide" onclick="showSection('guide'); return false;">User Guide</a></li>
+                    <li><a href="#faq" onclick="showSection('faq'); return false;">FAQs</a></li>
+                    <li><a href="#privacy" onclick="showSection('privacy'); return false;">Privacy Policy</a></li>
+                    <li><a href="#contact" onclick="showSection('contact'); return false;">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 H-TV. All rights reserved. Your trusted streaming platform for Pakistani television.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Watch History Panel -->
+    <div class="history-panel" id="historyPanel">
+        <div class="history-header">
+            <h3>Watch History</h3>
+            <button class="close-history" id="closeHistory"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="history-content">
+            <!-- History items will be added here dynamically -->
+        </div>
+        <div class="history-footer">
+            <button id="clearHistory" class="clear-history-btn">Clear History</button>
+        </div>
+    </div>
+    <!-- Mobile Icon Container -->
+    <div class="mobile-icon-container">
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Confirm Dialog -->
+    <div class="confirm-dialog" id="confirmDialog">
+        <div class="confirm-content">
+            <div class="confirm-header">
+                <h3>Confirm Action</h3>
+                <button class="close-confirm">&times;</button>
+            </div>
+            <div class="confirm-body">
+                <p id="confirmMessage">Are you sure you want to proceed?</p>
+            </div>
+            <div class="confirm-footer">
+                <button id="confirmCancel" class="btn-cancel">Cancel</button>
+                <button id="confirmOk" class="btn-confirm">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load libraries first -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

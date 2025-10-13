@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boys | Extreme Content</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../favicon.jpg" type="image/x-icon">
+    <link rel="icon" href="../favicon.jpg" type="image/x-icon">
+    <!-- Google Fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logotxt"><span>The</span><span>Boys</span></h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#about" onclick="showSection('about'); return false;">About</a></li>
+                <li><a href="#guide" onclick="showSection('guide'); return false;">User Guide</a></li>
+                <li><a href="#faq" onclick="showSection('faq'); return false;">FAQs</a></li>
+                <li><a href="#contact" onclick="showSection('contact'); return false;">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Stream Extreme Content</h1>
+        <p>Your source for the most extreme parkour fails, high jumps, and adrenaline-pumping content. Watch the craziest stunts and epic moments!</p>
+        <button class="cta-btn" onclick="scrollToVideos()">Start Watching Now</button>
+    </section>
+
+    <section class="video-section" id="video-section">
+        <div class="video-player-container">
+            <div class="video-player" id="video-player">
+                <!-- Video will be loaded here -->
+                <div class="placeholder-message">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Select a video to start watching</p>
+                </div>
+            </div>
+            
+            <!-- Ad Container Overlay -->
+            <div class="ad-container" id="adContainer">
+                <div class="ad-content" id="adContent">
+                    <!-- Ad content will be inserted here (image or video) -->
+                    <img src="../favicon.jpg" alt="Ad">
+                </div>
+                <div class="ad-info">
+                    <div class="ad-text">Ad</div>
+                    <div class="ad-timer" id="adTimer">20</div>
+                </div>
+                <button class="skip-ad-btn" id="skipAdBtn">Skip Ad</button>
+            </div>
+        </div>
+        
+        <div class="video-guide">
+            <div class="guide-header">
+                <div class="filter-controls">
+                    <input type="text" id="search" placeholder="Search videos...">
+                    <div class="select-container">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="parkour">Parkour</option>
+                            <option value="jumping">Jumping</option>
+                            <option value="stunts">Stunts</option>
+                            <option value="fails">Fails</option>
+                            <option value="extreme">Extreme Sports</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="guide-actions">
+                    <button class="favorites-btn" id="favoritesToggle">
+                        <i class="fas fa-heart"></i> Favorites
+                    </button>
+                    <button class="history-toggle">
+                        <i class="fas fa-history"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="videos" id="videos-container">
+                <!-- Sample videos - These will be dynamically generated in production -->
+                <div class="video" data-category="parkour" data-embed="<iframe src='https://www.youtube.com/embed/dQw4w9WgXcQ' allowfullscreen width='640' height='360' frameborder='0'></iframe><br>Epic Parkour Compilation">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video Thumbnail">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Epic Parkour Compilation</h3>
+                        <span class="video-category">Parkour</span>
+                    </div>
+                    <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                
+                <div class="video" data-category="fails" data-embed="<iframe src='https://www.youtube.com/embed/ixMhuFxbJvs' allowfullscreen width='640' height='360' frameborder='0'></iframe><br>Ultimate Fails Compilation">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/ixMhuFxbJvs/hqdefault.jpg" alt="Video Thumbnail">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Ultimate Fails Compilation</h3>
+                        <span class="video-category">Fails</span>
+                    </div>
+                    <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                
+                <div class="video" data-category="jumping" data-embed="<iframe src='https://www.boysontube.com/embed/35324' allowfullscreen width='640' height='360' frameborder='0'></iframe><br>Secretly dormitory at  ">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/rf72WmMh2LU/hqdefault.jpg" alt="Video Thumbnail">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Extreme Jumping Stunts</h3>
+                        <span class="video-category">Jumping</span>
+                    </div>
+                    <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2>About The Boys</h2>
+            <p>Welcome to The Boys - your ultimate destination for extreme content! We curate the most thrilling parkour, jumping, and stunt videos from around the web.</p>
+            <p>Our platform makes it easy to discover and enjoy adrenaline-pumping content. Whether you're into parkour fails, extreme jumps, or death-defying stunts, we've got you covered.</p>
+        </div>
+    </section>
+
+    <!-- User Guide Section -->
+    <section class="section" id="guide">
+        <div class="container">
+            <h2>User Guide</h2>
+            <div class="guide-item">
+                <h3>Finding Videos</h3>
+                <p>Use the search bar to find specific videos or browse by category using the dropdown menu.</p>
+            </div>
+            <div class="guide-item">
+                <h3>Saving Favorites</h3>
+                <p>Click the heart icon on any video to save it to your favorites for easy access later.</p>
+            </div>
+            <div class="guide-item">
+                <h3>Watch History</h3>
+                <p>Your recently watched videos are automatically saved to your history for convenient rewatching.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How do I add my own videos?</h3>
+                <p>Currently, only administrators can add new videos to the platform. Contact us if you have content to share.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is this content safe for all ages?</h3>
+                <p>No. The Boys features extreme stunts that should not be attempted at home. Viewer discretion is advised.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I download videos?</h3>
+                <p>We don't currently support video downloads as we embed content from other platforms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions, suggestions, or want to report an issue? Reach out to us!</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2><span>The</span><span>Boys</span></h2>
+                <p>Extreme Content Streaming</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#guide">User Guide</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 The Boys. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- History Panel -->
+    <div class="history-panel" id="historyPanel">
+        <div class="history-header">
+            <h3>Watch History</h3>
+            <button class="close-history"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="history-content" id="historyContent">
+            <!-- History items will be loaded here -->
+        </div>
+        <button class="clear-history">Clear History</button>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
