@@ -1,39 +1,242 @@
 // Simple script for H-TV with essential functionality - Performance Optimized
 // Channel Data
 const channels = [
+   
+const channels = [
     {
         id: 1,
-        name: "92 News",
-        category: "news",
+        name: "A Plus",
+        category: "entertainment",
         country: "pakistan",
-        logo: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/92_News_HD_Plus_logo.png/190px-92_News_HD_Plus_logo.png",
-        iframe: "<iframe src='https://www.boysontube.com/embed/35324' allowfullscreen width='640' height='360' frameborder='0'></iframe>"
+        logo: "https://netstream.pk/upload/12_aplus.png",
+        iframe: "https://live.streamly.com.co:8081/pk-aplus/index.m3u8"
     },
     {
         id: 2,
-        name: "A1 TV",
-        category: "entertainment",
+        name: "A Sports",
+        category: "sports",
         country: "pakistan",
-        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNbrukcjGYUJ6Nc9QhMQSgCLphsOLw4m8k_Q&s",
-        iframe: "https://live.streamly.com.co:8081/a1tv/index.m3u8"
+        logo: "https://netstream.pk/upload/a_sports_logo.jpg",
+        iframe: "<iframe src='https://bradm.ax/build/202410/09/10dddbda311d7cd7ad4cb3ee7ffaaa441bf5a620/index.html?mediaUrl=https%3A%2F%2Flive.streamly.com.co%3A8081%2Fpk-Asports%2Findex.m3u8' width='800px' height='400px' frameBorder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
     },
     {
         id: 3,
-        name: "Abb Tak",
-        category: "news",
+        name: "Aaj Entertainment",
+        category: "entertainment",
         country: "pakistan",
-        logo: "https://pakistan.mom-gmr.org/uploads/tx_lfrogmom/media/15519-1686_import.png",
-        iframe: "<iframe src='https://bradm.ax/build/202410/09/10dddbda311d7cd7ad4cb3ee7ffaaa441bf5a620/index.html?mediaUrl=https%3A%2F%2Flive.streamly.com.co%3A8081%2Fabbtak%2Findex.m3u8' width='800px' height='400px' frameBorder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/aaj-entertainment-live.webp?id=85",
+        iframe: "https://live.streamly.com.co:8081/pk-aajent/index.m3u8"
     },
     {
         id: 4,
-        name: "ARY Digital",
-        category: "Entertainment",
+        name: "Aaj News",
+        category: "news",
         country: "pakistan",
-        logo: "https://play-lh.googleusercontent.com/n9P9QTU4pPUtKAsD8Eun6mlxxwpFt4WRLhF29XziXjRrS_vcYv7xMhaVoMvdUDvluac",
-        iframe: '<iframe src="https://bradm.ax/build/202410/09/10dddbda311d7cd7ad4cb3ee7ffaaa441bf5a620/index.html?mediaUrl=https%3A%2F%2Flive.streamly.com.co%3A8081%2Fpk-arydigital%2Findex.m3u8" width="800px" height="400px" frameBorder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/aaj-news-live.webp?id=14",
+        iframe: "https://live.streamly.com.co:8081/aajnews/index.m3u8"
     },
-    // Add more channels here following the same format
+    {
+        id: 5,
+        name: "Aan HD",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://yt3.googleusercontent.com/WrdMTMVuWYOKEWKQS5FXZSu4F4eA6LkIg8PutARe0tHDYkwUANPmPIC_SWtVtnq7yxHYfzI09N8=s900-c-k-c0x00ffffff-no-rj",
+        iframe: "https://live.streamly.com.co:8081/pk-aantv/index.m3u8"
+    },
+    {
+        id: 6,
+        name: "ARY Digital",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://upload.wikimedia.org/wikipedia/en/f/f3/ARY_Digital_Logo_2.png",
+        iframe: "https://live.streamly.com.co:8081/pk-arydigital/index.m3u8"
+    },
+    {
+        id: 7,
+        name: "ARY News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://i.imgur.com/R4KtTbJ.jpg",
+        iframe: "https://live.streamly.com.co:8081/pk-arynews/index.m3u8"
+    },
+    {
+        id: 8,
+        name: "ARY Zindagi",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://netstream.pk/upload/11_ary_zindagi.png",
+        iframe: "https://live.streamly.com.co:8081/aryzindagi/index.m3u8"
+    },
+    {
+        id: 9,
+        name: "Bol Entertainment",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-entertainment-live.webp?id=82",
+        iframe: "https://live.streamly.com.co:8081/pk-bolent/index.m3u8"
+    },
+    {
+        id: 10,
+        name: "Bol News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://netstream.pk/upload/bol_news.png",
+        iframe: "https://live.streamly.com.co:8081/bol-news/index.m3u8"
+    },
+    {
+        id: 11,
+        name: "Cartoon Network",
+        category: "kids",
+        country: "usa",
+        logo: "https://netstream.pk/upload/10-1.png",
+        iframe: "https://live.streamly.com.co:8081/cartoonnetwork-sd/index.m3u8"
+    },
+    {
+        id: 12,
+        name: "Dawn News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://i.imgur.com/BMmlLwS.png",
+        iframe: "https://cdn22lhr.tamashaweb.com:8087/jazzauth/DawnNews-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ni8xMS8yMDI0IDc6MzQ6NTIgQU0maGFzaF92YWx1ZT1yQlpjYUR5VGNzeFllSlpzc3lobHR3PT0mdmFsaWRtaW51dGVzPTE="
+    },
+    {
+        id: 13,
+        name: "Express Entertainment",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/express-entertainment-live.webp?id=75",
+        iframe: "https://live.streamly.com.co:8081/expressnet/index.m3u8"
+    },
+    {
+        id: 14,
+        name: "Express News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/express-news-live.webp?id=70",
+        iframe: "https://live.streamly.com.co:8081/expressnews/index.m3u8"
+    },
+    {
+        id: 15,
+        name: "Geo Entertainment",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-entertainment-live.webp?id=72",
+        iframe: "https://live.streamly.com.co:8081/pk-geoent/index.m3u8"
+    },
+    {
+        id: 16,
+        name: "Geo Kahani",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://netstream.pk/upload/geokahani.png",
+        iframe: "https://live.streamly.com.co:8081/pk-geokahani/index.m3u8"
+    },
+    {
+        id: 17,
+        name: "Geo News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://i.imgur.com/Op4EsaB.png",
+        iframe: "https://live.streamly.com.co:8081/pk-geonews/index.m3u8"
+    },
+    {
+        id: 18,
+        name: "Green Entertainment",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://i.imgur.com/XBHvR5J.png",
+        iframe: "https://live.streamly.com.co:8081/pk-greenent/index.m3u8"
+    },
+    {
+        id: 19,
+        name: "GNN HD",
+        category: "news",
+        country: "pakistan",
+        logo: "https://i.imgur.com/VXVnXXi.png",
+        iframe: "https://live.streamly.com.co:8081/gnnnews/index.m3u8"
+    },
+    {
+        id: 20,
+        name: "HUM TV",
+        category: "entertainment",
+        country: "pakistan",
+        logo: "https://netstream.pk/upload/hum_logo.jpg",
+        iframe: "https://live.streamly.com.co:8081/pk-hument/index.m3u8"
+    },
+    {
+        id: 21,
+        name: "Hum News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://i.imgur.com/9OroocT.png",
+        iframe: "https://cdn21lhr.tamashaweb.com:8087/jazzauth/humnews-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8xMC8yMDI0IDY6MTc6MTkgQU0maGFzaF92YWx1ZT1MYnQ0VWJQd1U2WGpBQ0Nka2Vqcnl3PT0mdmFsaWRtaW51dGVzPTE="
+    },
+    {
+        id: 22,
+        name: "JALWA",
+        category: "music",
+        country: "pakistan",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/jalwa-tv-live.webp?id=79",
+        iframe: "https://live.streamly.com.co:8081/pk-jalwahd/index.m3u8"
+    },
+    {
+        id: 23,
+        name: "Neo News",
+        category: "news",
+        country: "usa",
+        logo: "https://netstream.pk/upload/10_neo.png",
+        iframe: "https://live.streamly.com.co:8081/neonews/index.m3u8"
+    },
+    {
+        id: 24,
+        name: "Nickelodeon",
+        category: "kids",
+        country: "usa",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/TMSH-1720190626301.webp?id=84",
+        iframe: "https://live.streamly.com.co:8081/nick/index.m3u8"
+    },
+    {
+        id: 25,
+        name: "Nick Jr.",
+        category: "kids",
+        country: "usa",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1729547438288.webp?id=52",
+        iframe: "https://live.streamly.com.co:8081/nickjr/index.m3u8"
+    },
+    {
+        id: 26,
+        name: "PTV Sports",
+        category: "sports",
+        country: "pakistan",
+        logo: "https://netstream.pk/upload/28.png",
+        iframe: "https://live.streamly.com.co:8081/pk-ptvsports/index.m3u8"
+    },
+    {
+        id: 27,
+        name: "Samaa News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjiXwBvEv4fkfLuu3ESolIpkBtaz38aC9Wvw&s",
+        iframe: "https://ythls.armelin.one/channel/UCJekW1Vj5fCVEGdye_mBN6Q.m3u8"
+    },
+    {
+        id: 28,
+        name: "Such News",
+        category: "news",
+        country: "pakistan",
+        logo: "https://netstream.pk/upload/1_such.png",
+        iframe: "https://live.streamly.com.co:8081/suchnews/index.m3u8"
+    },
+    {
+        id: 29,
+        name: "Ten Sports",
+        category: "sports",
+        country: "pakistan",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ten-sports-hd-logo.webp?id=81",
+        iframe: "https://live.streamly.com.co:8081/pk-tensports/index.m3u8"
+    }
+];
+
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
