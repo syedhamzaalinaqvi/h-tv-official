@@ -1,9 +1,7 @@
 // Simple script for H-TV with essential functionality - Performance Optimized
 // Channel Data
 const channels = [
-   
-const channels = [
-    {
+     {
         id: 1,
         name: "A Plus",
         category: "entertainment",
@@ -235,8 +233,8 @@ const channels = [
         logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ten-sports-hd-logo.webp?id=81",
         iframe: "https://live.streamly.com.co:8081/pk-tensports/index.m3u8"
     }
-];
 
+    // Add more channels here following the same format
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
