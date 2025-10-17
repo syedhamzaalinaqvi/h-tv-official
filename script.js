@@ -223,7 +223,7 @@ const channels = [
         category: "news",
         country: "pakistan",
         logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/samaa-tv-live.webp?id=44",
-        iframe: "https://cdn12isb.tamashaweb.com:8087/jazzauth/Tamasha-News-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTAvMTcvMjAyNSA3OjQ4OjI2IEFNJmhhc2hfdmFsdWU9ZENYbzVjVkR6REdMbXNhWmZOZHRNZz09JnZhbGlkbWludXRlcz02MA%3D%3D:8087/jazzauth/Tamasha-News-abr/playlist.m3u8"
+        iframe: "https://cdn24lhr.tamashaweb.com:8087/jazzauth/samaaTV-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTAvMTcvMjAyNSA4OjM0OjA5IEFNJmhhc2hfdmFsdWU9QThMUTFmSk56SGhvdkx0OXQyTE5vZz09JnZhbGlkbWludXRlcz02MA%3D%3D:8087/jazzauth/samaaTV-abr/playlist.m3u8"
     },
     {
         id: 28,
