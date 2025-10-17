@@ -271,6 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to update the player with new content
 function updatePlayer(src) {
     const playerContainer = document.getElementById('player-container');
+    const powerLight = document.querySelector('.tv-power-light');
     
     // Clear the current content
     playerContainer.innerHTML = '';
@@ -283,6 +284,11 @@ function updatePlayer(src) {
         // If it's a direct stream URL, create a bradmax player iframe for it
         const bradmaxIframe = `<iframe src="https://bradm.ax/build/202410/09/10dddbda311d7cd7ad4cb3ee7ffaaa441bf5a620/index.html?mediaUrl=${encodeURIComponent(src)}" width="800px" height="400px" frameBorder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
         playerContainer.innerHTML = bradmaxIframe;
+    }
+    
+    // Turn on the power light (green)
+    if (powerLight) {
+        powerLight.classList.add('on');
     }
 }
 
@@ -455,7 +461,7 @@ let selectedChannelSrc = null;
 function initPlayer() {
     // Initialize with empty container - will be filled when a channel is selected
     const playerContainer = document.getElementById('player-container');
-    playerContainer.innerHTML = '<div class="initial-message">Select a channel to start watching</div>';
+    playerContainer.innerHTML = '<div class="initial-message">🎬 Pick Your Channel & Turn ON TV! 📺</div>';
 }
 
 // Setup channel click events using event delegation
@@ -516,11 +522,7 @@ function setupChannels() {
                 updatePlayer(channel.iframe);
                 
                 // Add to history
-                addToHistory({
-                    name: channel.name,
-                    logo: channel.logo,
-                    src: channel.iframe
-                });
+                addToHistory(channel.name, channel.iframe, channel.logo, channel.category);
             }
         });
         
@@ -717,7 +719,19 @@ function setupFilters() {
     const searchInput = document.getElementById('search');
     const categoryFilter = document.getElementById('categoryFilter');
     const countryFilter = document.getElementById('countryFilter');
-    const noResults = document.querySelector('.no-results');
+    const channelGuide = document.querySelector('.channel-guide');
+    
+    // Create and add no-results message element dynamically if it doesn't exist
+    let noResults = channelGuide.querySelector('.no-results');
+    if (!noResults) {
+        noResults = document.createElement('div');
+        noResults.className = 'no-results';
+        noResults.innerHTML = `
+            <i class="fas fa-search"></i>
+            <p>No channels match your search criteria</p>
+        `;
+        channelGuide.appendChild(noResults);
+    }
     
     // Event listeners
     searchInput.addEventListener('input', debounce(applyFilters, 300));
@@ -780,9 +794,6 @@ function setupFilters() {
     
     // Make applyFilters available globally
     window.applyFilters = applyFilters;
-    
-    // Initial filter
-    applyFilters();
 }
 
 // Setup watch history panel and functionality
