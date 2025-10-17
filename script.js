@@ -6,7 +6,7 @@ const channels = [
         name: "A Plus",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/12_aplus.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/a-plus-live.webp?id=42",
         iframe: "https://live.streamly.com.co:8081/pk-aplus/index.m3u8"
     },
     {
@@ -14,7 +14,7 @@ const channels = [
         name: "A Sports",
         category: "sports",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/a_sports_logo.jpg",
+        logo: "https://yt3.googleusercontent.com/7ko4g0YM7E49IIbhfMhYJOWGTCIAuASHcPXRsBPWMOiBIuM0tBHe2Z9OVkzO1vVSxGSDZ1f1Sg=s900-c-k-c0x00ffffff-no-rj",
         iframe: "<iframe src='https://bradm.ax/build/202410/09/10dddbda311d7cd7ad4cb3ee7ffaaa441bf5a620/index.html?mediaUrl=https%3A%2F%2Flive.streamly.com.co%3A8081%2Fpk-Asports%2Findex.m3u8' width='800px' height='400px' frameBorder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>"
     },
     {
@@ -22,7 +22,7 @@ const channels = [
         name: "Aaj Entertainment",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/aaj-entertainment-live.webp?id=85",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/aaj-entertainment-live.webp?id=10",
         iframe: "https://live.streamly.com.co:8081/pk-aajent/index.m3u8"
     },
     {
@@ -30,7 +30,7 @@ const channels = [
         name: "Aaj News",
         category: "news",
         country: "pakistan",
-        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/aaj-news-live.webp?id=14",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/aaj-news-live.webp?id=48",
         iframe: "https://live.streamly.com.co:8081/aajnews/index.m3u8"
     },
     {
@@ -38,7 +38,7 @@ const channels = [
         name: "Aan HD",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://yt3.googleusercontent.com/WrdMTMVuWYOKEWKQS5FXZSu4F4eA6LkIg8PutARe0tHDYkwUANPmPIC_SWtVtnq7yxHYfzI09N8=s900-c-k-c0x00ffffff-no-rj",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/1681977574-logo.webp?id=71",
         iframe: "https://live.streamly.com.co:8081/pk-aantv/index.m3u8"
     },
     {
@@ -46,7 +46,7 @@ const channels = [
         name: "ARY Digital",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://upload.wikimedia.org/wikipedia/en/f/f3/ARY_Digital_Logo_2.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ary-digital-live-logo.webp?id=34",
         iframe: "https://live.streamly.com.co:8081/pk-arydigital/index.m3u8"
     },
     {
@@ -54,7 +54,7 @@ const channels = [
         name: "ARY News",
         category: "news",
         country: "pakistan",
-        logo: "https://i.imgur.com/R4KtTbJ.jpg",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/1684242189-logo.webp?id=64",
         iframe: "https://live.streamly.com.co:8081/pk-arynews/index.m3u8"
     },
     {
@@ -62,7 +62,7 @@ const channels = [
         name: "ARY Zindagi",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/11_ary_zindagi.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ary-zindagi-live-logo.webp?id=38",
         iframe: "https://live.streamly.com.co:8081/aryzindagi/index.m3u8"
     },
     {
@@ -70,7 +70,7 @@ const channels = [
         name: "Bol Entertainment",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-entertainment-live.webp?id=82",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-entertainment-live.webp?id=89",
         iframe: "https://live.streamly.com.co:8081/pk-bolent/index.m3u8"
     },
     {
@@ -78,7 +78,7 @@ const channels = [
         name: "Bol News",
         category: "news",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/bol_news.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-news-live.webp?id=97",
         iframe: "https://live.streamly.com.co:8081/bol-news/index.m3u8"
     },
     {
@@ -86,7 +86,7 @@ const channels = [
         name: "Cartoon Network",
         category: "kids",
         country: "usa",
-        logo: "https://netstream.pk/upload/10-1.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/cartoon-network-live.webp?id=82",
         iframe: "https://live.streamly.com.co:8081/cartoonnetwork-sd/index.m3u8"
     },
     {
@@ -94,7 +94,7 @@ const channels = [
         name: "Dawn News",
         category: "news",
         country: "pakistan",
-        logo: "https://i.imgur.com/BMmlLwS.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/dawn-news-live.webp?id=46",
         iframe: "https://cdn22lhr.tamashaweb.com:8087/jazzauth/DawnNews-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9Ni8xMS8yMDI0IDc6MzQ6NTIgQU0maGFzaF92YWx1ZT1yQlpjYUR5VGNzeFllSlpzc3lobHR3PT0mdmFsaWRtaW51dGVzPTE="
     },
     {
@@ -126,7 +126,7 @@ const channels = [
         name: "Geo Kahani",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/geokahani.png",
+        logo: "https://yt3.googleusercontent.com/ytc/AIdro_lt2jwFpTYjusceAsLlIE0B312SEUb4A4Du-rbN8n_STCg=s900-c-k-c0x00ffffff-no-rj",
         iframe: "https://live.streamly.com.co:8081/pk-geokahani/index.m3u8"
     },
     {
@@ -134,7 +134,7 @@ const channels = [
         name: "Geo News",
         category: "news",
         country: "pakistan",
-        logo: "https://i.imgur.com/Op4EsaB.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-news-live.webp?id=98",
         iframe: "https://live.streamly.com.co:8081/pk-geonews/index.m3u8"
     },
     {
@@ -142,7 +142,7 @@ const channels = [
         name: "Green Entertainment",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://i.imgur.com/XBHvR5J.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/1702552123-logo.webp?id=45",
         iframe: "https://live.streamly.com.co:8081/pk-greenent/index.m3u8"
     },
     {
@@ -150,7 +150,7 @@ const channels = [
         name: "GNN HD",
         category: "news",
         country: "pakistan",
-        logo: "https://i.imgur.com/VXVnXXi.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/gnn-live.webp?id=10",
         iframe: "https://live.streamly.com.co:8081/gnnnews/index.m3u8"
     },
     {
@@ -158,7 +158,7 @@ const channels = [
         name: "HUM TV",
         category: "entertainment",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/hum_logo.jpg",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1738840613135.webp?id=70",
         iframe: "https://live.streamly.com.co:8081/pk-hument/index.m3u8"
     },
     {
@@ -166,7 +166,7 @@ const channels = [
         name: "Hum News",
         category: "news",
         country: "pakistan",
-        logo: "https://i.imgur.com/9OroocT.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/HUM-News-Channel-logo.webp?id=17",
         iframe: "https://cdn21lhr.tamashaweb.com:8087/jazzauth/humnews-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9NC8xMC8yMDI0IDY6MTc6MTkgQU0maGFzaF92YWx1ZT1MYnQ0VWJQd1U2WGpBQ0Nka2Vqcnl3PT0mdmFsaWRtaW51dGVzPTE="
     },
     {
@@ -182,7 +182,7 @@ const channels = [
         name: "Neo News",
         category: "news",
         country: "usa",
-        logo: "https://netstream.pk/upload/10_neo.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/neo-tv-live.webp?id=27",
         iframe: "https://live.streamly.com.co:8081/neonews/index.m3u8"
     },
     {
@@ -206,7 +206,7 @@ const channels = [
         name: "PTV Sports",
         category: "sports",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/28.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321954030.webp?id=30",
         iframe: "https://live.streamly.com.co:8081/pk-ptvsports/index.m3u8"
     },
     {
@@ -214,15 +214,15 @@ const channels = [
         name: "Samaa News",
         category: "news",
         country: "pakistan",
-        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjiXwBvEv4fkfLuu3ESolIpkBtaz38aC9Wvw&s",
-        iframe: "https://ythls.armelin.one/channel/UCJekW1Vj5fCVEGdye_mBN6Q.m3u8"
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/samaa-tv-live.webp?id=44",
+        iframe: "https://cdn12isb.tamashaweb.com:8087/jazzauth/Tamasha-News-abr/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTAvMTcvMjAyNSA3OjQ4OjI2IEFNJmhhc2hfdmFsdWU9ZENYbzVjVkR6REdMbXNhWmZOZHRNZz09JnZhbGlkbWludXRlcz02MA%3D%3D:8087/jazzauth/Tamasha-News-abr/playlist.m3u8"
     },
     {
         id: 28,
         name: "Such News",
         category: "news",
         country: "pakistan",
-        logo: "https://netstream.pk/upload/1_such.png",
+        logo: "https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/such-tv-live.webp?id=15",
         iframe: "https://live.streamly.com.co:8081/suchnews/index.m3u8"
     },
     {
