@@ -937,8 +937,14 @@ body.dark-mode #clearHistory {
     
     .channel-guide {
         height: auto;
-        max-height: 500px;
+        max-height: none;
         position: static;
+    }
+    
+    .channels {
+        overflow-y: visible;
+        height: auto;
+        max-height: none;
     }
     
     .content-wrapper {
@@ -989,6 +995,8 @@ body.dark-mode #clearHistory {
     
     .channels {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        overflow-y: visible;
+        height: auto;
     }
     
     .channel {
@@ -1042,6 +1050,8 @@ body.dark-mode #clearHistory {
     
     .channels {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        overflow-y: visible;
+        height: auto;
     }
     
     .channel {
