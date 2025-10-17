@@ -481,7 +481,36 @@ function setupChannels() {
             <button class="favorite-btn"><i class="fa-regular fa-heart"></i></button>
         `;
         
-        // Add click event listener
+        // Get the favorite button
+        const favoriteBtn = channelElement.querySelector('.favorite-btn');
+        
+        // Add click event listener for favorite button
+        favoriteBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent channel click event
+            
+            // Get current favorites
+            let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const channelSrc = channel.iframe;
+            const heartIcon = this.querySelector('i');
+            
+            // Toggle favorite
+            if (favorites.includes(channelSrc)) {
+                // Remove from favorites
+                favorites = favorites.filter(src => src !== channelSrc);
+                heartIcon.classList.remove('fa-solid');
+                heartIcon.classList.add('fa-regular');
+            } else {
+                // Add to favorites
+                favorites.push(channelSrc);
+                heartIcon.classList.remove('fa-regular');
+                heartIcon.classList.add('fa-solid');
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        });
+        
+        // Add click event listener for channel
         channelElement.addEventListener('click', function() {
             if (channel.iframe) {
                 updatePlayer(channel.iframe);
