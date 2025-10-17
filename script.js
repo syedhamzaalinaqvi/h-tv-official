@@ -90,6 +90,14 @@ const channels = [
         iframe: "https://live.streamly.com.co:8081/cartoonnetwork-sd/index.m3u8"
     },
     {
+        id: 11,
+        name: "Color Cineplex",
+        category: "entertainment",
+        country: "India",
+        logo: "https://jiotvimages.cdn.jio.com/dare_images/images/Color_Cineplex_HD.png",
+        iframe: "https://live.streamly.com.co:8081/colorscinplex/index.m3u8"
+    },
+    {
         id: 12,
         name: "Dawn News",
         category: "news",
